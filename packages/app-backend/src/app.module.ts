@@ -9,7 +9,7 @@ import { join } from 'path';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../../app-ui', 'dist'),
+      rootPath: join(__dirname, '../../../app-ui', 'dist'),
     }),
     TraceModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({

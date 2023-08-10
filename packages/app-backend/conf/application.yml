@@ -1,0 +1,8 @@
+datasource:
+  mongodb:
+    type: mongodb
+    host: 10.5.153.1
+    port: 27017
+    username: arex
+    password: iLoveArex
+    database: arex_storage_db

@@ -1,0 +1,79 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type BaseType {
+  """name"""
+  name: String!
+
+  """type"""
+  type: String!
+
+  """version"""
+  version: String!
+}
+
+type TagObjectType {
+  """name"""
+  name: String!
+
+  """value"""
+  value: String!
+}
+
+type ContextsObjectType {
+  """browser"""
+  browser: BaseType!
+
+  """os"""
+  os: BaseType!
+}
+
+type TraceObjectType {
+  """id"""
+  id: ID!
+
+  """标签"""
+  tags: [TagObjectType!]!
+
+  """ip"""
+  ip: String!
+
+  """contexts"""
+  contexts: ContextsObjectType!
+}
+
+type KeyValueObjectType {
+  """key"""
+  key: String!
+
+  """value"""
+  value: String!
+}
+
+type OverviewModelObjectType {
+  """os概览"""
+  os: [KeyValueObjectType!]!
+
+  """browser概览"""
+  browser: [KeyValueObjectType!]!
+
+  """url概览"""
+  url: [KeyValueObjectType!]!
+
+  """user概览"""
+  user: [KeyValueObjectType!]!
+}
+
+type Query {
+  """获取概览数据"""
+  getTraceOverview: OverviewModelObjectType!
+}
+
+type Mutation {
+  """上报trace数据"""
+  reportTraceData(
+    """trace tag数据"""
+    data: String!
+  ): TraceObjectType!
+}

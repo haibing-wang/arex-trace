@@ -1,0 +1,20 @@
+query GetTraceOverview {
+  getTraceOverview {
+    os {
+      key
+      value
+    }
+    browser {
+      key
+      value
+    }
+    url {
+      key
+      value
+    }
+    user {
+      key
+      value
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# yaml 配置实例
+version: '3'
+services:
+  arex:
+    image: zhangtao25/arex-trace:main
+    restart: always
+    container_name: arex-trace
+    ports:
+      - 8080:8080
+    volumes:
+      - ./packages/app-backend/conf/application.yml:/app/packages/app-backend/conf/application.yml

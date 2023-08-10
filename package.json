@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm -r do-dev",
-    "build": "pnpm -r do-build"
+    "build": "pnpm -r do-build",
+    "start": "pnpm -r do-start"
   },
   "keywords": [],
   "author": "",

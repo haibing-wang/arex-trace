@@ -1,7 +1,7 @@
 datasource:
   mongodb:
     type: mongodb
-    host: mongodb
+    host: trace-mongodb
     port: 27017
     username: arex
     password: iLoveArex

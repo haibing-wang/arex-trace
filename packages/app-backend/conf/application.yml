@@ -1,7 +1,7 @@
 datasource:
   mongodb:
     type: mongodb
-    host: localhost
+    host: 35.93.56.145
     port: 27017
     username: arex
     password: iLoveArex

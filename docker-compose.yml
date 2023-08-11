@@ -9,3 +9,19 @@ services:
       - 8080:8080
     volumes:
       - ./packages/app-backend/conf/application.yml:/app/packages/app-backend/conf/application.yml
+  mongodb:
+    image: mongo:5.0
+    container_name: arex-mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+      - ./mongo-allone-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    command: --auth
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=citizix
+      - MONGO_INITDB_ROOT_PASSWORD=S3cret
+      - MONGO_INITDB_DATABASE=rootdb
+      - MONGO_USERNAME=arex
+      - MONGO_PASSWORD=iLoveArex
